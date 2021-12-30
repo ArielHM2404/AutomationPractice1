@@ -3,7 +3,8 @@
 
 # Log file
 *.log
-
+src/test/resources/logs
+.logs/*
 # BlueJ files
 *.ctxt
 
@@ -14,7 +15,7 @@
 .idea/libraries
 .idea/*
 .target/
-src/test/resources/logs/
+
 
 # Package Files #
 *.jar

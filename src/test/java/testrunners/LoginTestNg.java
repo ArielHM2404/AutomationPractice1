@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
         features = {"src/test/resources/features"},
         glue = {"stepsdefinitions"},
-        tags = "@SmokeTest",
+        tags = "@LoginValidCredentials",
         monochrome = true,
         plugin = {
                 "json:target/cucumber-reports/cucumber.json", "pretty",
