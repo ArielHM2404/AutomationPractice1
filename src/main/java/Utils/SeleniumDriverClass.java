@@ -3,6 +3,8 @@ package Utils;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -81,6 +83,9 @@ public class SeleniumDriverClass {
 
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(options);
+            driver.manage().deleteAllCookies();
+            driver.get("chrome://settings/clearBrowserData");
+            driver.findElement(By.xpath("//settings-ui")).sendKeys(Keys.ENTER);
             driver.manage().window().maximize();
             log.info("Chrome Browser Launched !!!");
 
@@ -101,7 +106,13 @@ public class SeleniumDriverClass {
     }
 
     public static void navigateToPage(String url) {
+       // WebDriver driver = new ChromeDriver();
+
+       // driver.manage().deleteAllCookies();
+      /*  driver.get("chrome://settings/clearBrowserData");
+        driver.findElement(By.xpath("//settings-ui")).sendKeys(Keys.ENTER);   */
         driver.get(url);
+
     }
 
     public static WebDriver getDriver() {
