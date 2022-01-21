@@ -4,6 +4,7 @@ import Utils.SeleniumDriverClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -78,14 +79,14 @@ public class PageHooks {
 
         }
 
-        SeleniumDriverClass.tearDown();
+//        SeleniumDriverClass.tearDown();
     }
 
-//    @AfterSuite
-//    public void teadDown() {
-//        SeleniumDriverClass.tearDown();
-//
-//    }
+    @AfterSuite
+    public void teadDown() {
+        SeleniumDriverClass.tearDown();
+
+    }
 }
 
 

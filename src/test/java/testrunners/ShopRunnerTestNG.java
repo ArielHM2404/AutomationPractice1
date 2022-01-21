@@ -1,13 +1,14 @@
 package testrunners;
 
 //import io.cucumber.junit.CucumberOptions;
-import io.cucumber.testng.CucumberOptions;
+
 import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = {"src/test/resources/features"},
         glue = {"stepsdefinitions"},
-        tags = "@LoginValidCredentials or @LoginValidCredentials1",
+        tags = "@Shopping",
         monochrome = true,
         plugin = {
                 "json:target/cucumber-reports/cucumber.json", "pretty",
@@ -15,5 +16,5 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         })
 
-public class LoginTestNg extends AbstractTestNGCucumberTests{
+public class ShopRunnerTestNG extends AbstractTestNGCucumberTests{
 }

@@ -8,6 +8,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 
 import java.io.File;
@@ -70,12 +71,12 @@ public class CucumberHooks {
 //            SeleniumDriver.tearDown();
 
 
-        SeleniumDriverClass.tearDown();
+//        SeleniumDriverClass.tearDown();
     }
 
-//    @AfterSuite
-//    public void teadDown() {
-//        SeleniumDriverClass.tearDown();
-//
-//    }
+    @AfterSuite
+    public void teadDown() {
+        SeleniumDriverClass.tearDown();
+
+    }
 }

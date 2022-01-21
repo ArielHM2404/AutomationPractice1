@@ -174,7 +174,7 @@ public class SeleniumDriverClass {
 
     public static void tearDown() {
         if (driver != null) {
-            driver.close();
+//            driver.close();
             driver.quit();
         }
         seleniumDriver = null;

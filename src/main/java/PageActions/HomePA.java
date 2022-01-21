@@ -23,4 +23,8 @@ public class HomePA {
         homePL.accountMenu.click();
     }
 
+    public void clickShopMenu() {
+        homePL.shopMenu.click();
+    }
+
 }
